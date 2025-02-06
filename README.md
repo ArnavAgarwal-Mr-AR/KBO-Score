@@ -3,6 +3,8 @@
 ## Overview
 This project is a **KBO (Korean Baseball Organization) Match Performance Predictor**, which allows users to select two baseball teams and predict their key performance statistics if they were to play against each other. The tool also provides a probability score for winning and a historical performance comparison.
 
+Try it here: https://huggingface.co/spaces/MrAR/KBO-Score
+
 ## Features
 - **Team Selection:** Choose two teams from a dropdown menu.
 - **Performance Prediction:** Predict key stats including Wins, Losses, ERA, Strikeouts, and WHIP.

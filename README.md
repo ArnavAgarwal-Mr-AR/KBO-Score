@@ -93,8 +93,8 @@ The data used in this project includes KBO team statistics from **2015 to 2022**
 ## Installation & Setup
 1. Clone the repository:
    ```sh
-   git clone https://github.com/your-repo/kbo-predictor.git
-   cd kbo-predictor
+   git clone https://github.com/ArnavAgarwal-Mr-AR/KBO-Score.git
+   cd KBO-Score
    ```
 2. Install dependencies:
    ```sh
@@ -123,11 +123,6 @@ The data used in this project includes KBO team statistics from **2015 to 2022**
 - **Allow Custom Year Selection** for predictions beyond 2022.
 - **Improve Visualization** with interactive charts.
 
-## License
-This project is licensed under the **MIT License**.
-
-## Contributors
-- **Your Name** - Developer & Maintainer
 
 ## Contact me 📪
 <div id="badges">

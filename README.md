@@ -5,6 +5,9 @@ This project is a **KBO (Korean Baseball Organization) Match Performance Predict
 
 Try it here: https://huggingface.co/spaces/MrAR/KBO-Score
 
+The results will look like this
+![image](https://github.com/user-attachments/assets/ccb62151-6c32-4a89-854e-4a366ddea638)
+
 ## Features
 - **Team Selection:** Choose two teams from a dropdown menu.
 - **Performance Prediction:** Predict key stats including Wins, Losses, ERA, Strikeouts, and WHIP.

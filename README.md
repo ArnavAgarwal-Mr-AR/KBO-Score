@@ -1,105 +1,133 @@
-# KBO Score Analysis
+# KBO Match Performance Prediction
 
-KBO Score Analysis is a project designed to analyze and visualize Korean Baseball Organization (KBO) league data, focusing on batting and pitching statistics from 2015 to 2022.
-
-## Directory Structure
-
-```mermaid
-graph TD
-    A[KBO-Score/] --> B[README.md]
-    A --> C[R_Code.R]
-    A --> D[Datasets/]
-    D --> E[2015 data/]
-    D --> F[2016 data/]
-    D --> G[2017 data/]
-    D --> H[2018 data/]
-    D --> I[2019 data/]
-    D --> J[2020 data/]
-    D --> K[2021 data/]
-    D --> L[2022 data/]
-    E --> M[2015_league_batting.csv]
-    E --> N[2015_league_pitching.csv]
-    F --> O[2016_league_batting.csv]
-    F --> P[2016_league_pitching.csv]
-    G --> Q[2017_league_batting.csv]
-    G --> R[2017_league_pitching.csv]
-    H --> S[2018_league_batting.csv]
-    H --> T[2018_league_pitching.csv]
-    I --> U[2019_league_batting.csv]
-    I --> V[2019_league_pitching.csv]
-    J --> W[2020_league_batting.csv]
-    J --> X[2020_league_pitching.csv]
-    K --> Y[2021_league_batting.csv]
-    K --> Z[2021_league_pitching.csv]
-    L --> AA[2022_league_batting.csv]
-    L --> AB[2022_league_pitching.csv]
-```
-
-```
-arnavagarwal-mr-ar-kbo-score/
-├── README.md          # Project documentation
-├── R_Code.R           # Core R script for data analysis
-├── Datasets/          # Folder containing datasets for analysis
-    ├── 2015 data/     # Batting and pitching data for 2015
-    ├── 2016 data/     # Batting and pitching data for 2016
-    ├── 2017 data/     # Batting and pitching data for 2017
-    ├── 2018 data/     # Batting and pitching data for 2018
-    ├── 2019 data/     # Batting and pitching data for 2019
-    ├── 2020 data/     # Batting and pitching data for 2020
-    ├── 2021 data/     # Batting and pitching data for 2021
-    └── 2022 data/     # Batting and pitching data for 2022
-```
+## Overview
+This project is a **KBO (Korean Baseball Organization) Match Performance Predictor**, which allows users to select two baseball teams and predict their key performance statistics if they were to play against each other. The tool also provides a probability score for winning and a historical performance comparison.
 
 ## Features
+- **Team Selection:** Choose two teams from a dropdown menu.
+- **Performance Prediction:** Predict key stats including Wins, Losses, ERA, Strikeouts, and WHIP.
+- **Winning Probability:** Calculates the probability of each team winning.
+- **Historical Performance:** Displays a trend of the selected teams' past performances.
+- **User-Friendly Interface:** Built using Gradio with an intuitive design.
 
-- **Historical Data Analysis**: Analyze batting and pitching statistics for KBO league teams from 2015 to 2022.
-- **Visualization**: Generate insightful visualizations for key performance metrics.
-- **Customizable Analysis**: Modify the R script to adapt to additional datasets or specific analytical needs.
+## Technologies Used
+- **Python**
+- **Pandas** (for data manipulation)
+- **NumPy** (for calculations)
+- **Matplotlib & Seaborn** (for visualization)
+- **Scikit-Learn** (for predictive modeling)
+- **Gradio** (for building the user interface)
 
-## Getting Started
+## Dataset
+The data used in this project includes KBO team statistics from **2015 to 2022**, sourced from structured CSV files stored in a Hugging Face Space repository. The data consists of:
+- **Batting Data** (`*_league_batting.csv`)
+- **Pitching Data** (`*_league_pitching.csv`)
 
-### Prerequisites
-
-- [R](https://www.r-project.org/) (version 4.0 or higher)
-- Required R packages:
-  - `ggplot2`
-  - `dplyr`
-  - `tidyr`
-
-Install required packages with:
-
-```R
-install.packages(c("ggplot2", "dplyr", "tidyr"))
-```
-
-### Running the Script
-
+## Installation & Setup
 1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/ArnavAgarwal-Mr-AR/KBO-Score.git
+   ```sh
+   git clone https://github.com/your-repo/kbo-predictor.git
+   cd kbo-predictor
    ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```sh
+   python app.py
+   ```
+4. Open the Gradio interface in your browser and start predicting!
 
-2. Open the R script `R_Code.R` in your R environment.
-3. Execute the script to process the datasets and generate visualizations.
-4. Outputs, including plots, will be displayed or saved as needed.
+## Usage
+1. Select **Team A** and **Team B** from the dropdown menu.
+2. Click **Predict** to generate the statistical comparison.
+3. View the predicted **performance table** and **winning probability**.
+4. Check the **historical performance chart** for trends.
 
-## Repository Contents
+## Model & Prediction Approach
+- A **Random Forest Regressor** is used for predicting key performance metrics.
+- **Logistic Regression** is implemented for predicting win probability.
+- Historical data is used to improve the accuracy of predictions.
 
-- **R_Code.R**: Contains the core R script for processing and analyzing datasets.
-- **Datasets/**: Organized folder structure with batting and pitching data for each year from 2015 to 2022.
-
-## Contributing
-
-Contributions are welcome! To contribute:
-1. Fork the repository.
-2. Create a new branch (`feature/your-feature-name`).
-3. Commit your changes (`git commit -m 'Add new feature'`).
-4. Push to the branch (`git push origin feature/your-feature-name`).
-5. Open a Pull Request.
+## Future Enhancements
+- **Incorporate More Features** (home/away performance, weather conditions, etc.).
+- **Use Deep Learning Models** for better accuracy.
+- **Allow Custom Year Selection** for predictions beyond 2022.
+- **Improve Visualization** with interactive charts.
 
 ## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
+
+## Contributors
+- **Your Name** - Developer & Maintainer
+
+## Contact
+For any questions or contributions, feel free to reach out at **your.email@example.com**.
+
+# KBO Match Performance Prediction
+
+## Overview
+This project is a **KBO (Korean Baseball Organization) Match Performance Predictor**, which allows users to select two baseball teams and predict their key performance statistics if they were to play against each other. The tool also provides a probability score for winning and a historical performance comparison.
+
+## Features
+- **Team Selection:** Choose two teams from a dropdown menu.
+- **Performance Prediction:** Predict key stats including Wins, Losses, ERA, Strikeouts, and WHIP.
+- **Winning Probability:** Calculates the probability of each team winning.
+- **Historical Performance:** Displays a trend of the selected teams' past performances.
+- **User-Friendly Interface:** Built using Gradio with an intuitive design.
+
+## Technologies Used
+- **Python**
+- **Pandas** (for data manipulation)
+- **NumPy** (for calculations)
+- **Matplotlib & Seaborn** (for visualization)
+- **Scikit-Learn** (for predictive modeling)
+- **Gradio** (for building the user interface)
+
+## Dataset
+The data used in this project includes KBO team statistics from **2015 to 2022**, sourced from structured CSV files stored in a Hugging Face Space repository. The data consists of:
+- **Batting Data** (`*_league_batting.csv`)
+- **Pitching Data** (`*_league_pitching.csv`)
+
+## Installation & Setup
+1. Clone the repository:
+   ```sh
+   git clone https://github.com/your-repo/kbo-predictor.git
+   cd kbo-predictor
+   ```
+2. Install dependencies:
+   ```sh
+   pip install -r requirements.txt
+   ```
+3. Run the application:
+   ```sh
+   python app.py
+   ```
+4. Open the Gradio interface in your browser and start predicting!
+
+## Usage
+1. Select **Team A** and **Team B** from the dropdown menu.
+2. Click **Predict** to generate the statistical comparison.
+3. View the predicted **performance table** and **winning probability**.
+4. Check the **historical performance chart** for trends.
+
+## Model & Prediction Approach
+- A **Random Forest Regressor** is used for predicting key performance metrics.
+- **Logistic Regression** is implemented for predicting win probability.
+- Historical data is used to improve the accuracy of predictions.
+
+## Future Enhancements
+- **Incorporate More Features** (home/away performance, weather conditions, etc.).
+- **Use Deep Learning Models** for better accuracy.
+- **Allow Custom Year Selection** for predictions beyond 2022.
+- **Improve Visualization** with interactive charts.
+
+## License
+This project is licensed under the **MIT License**.
+
+## Contributors
+- **Your Name** - Developer & Maintainer
 
 ## Contact me 📪
 <div id="badges">
@@ -114,4 +142,3 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
  <img src="https://img.shields.io/badge/Medium-12100E?style=for-the-badge&logo=medium&logoColor=white"  alt="Medium Badge" />
  </a>
 </div>
-
